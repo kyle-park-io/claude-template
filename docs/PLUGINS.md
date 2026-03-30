@@ -61,17 +61,18 @@ Plugins installed in this project (project scope):
 
 | Name                   | Description                                                                                     |
 | ---------------------- | ----------------------------------------------------------------------------------------------- |
-| `commit-commands`      | Git commit, push, and PR creation workflows                                                     |
+| `frontend-design`      | UI/UX design guidance and frontend component best practices                                     |
+| `feature-dev`          | Comprehensive feature development workflow with specialized agents                              |
+| `context7`             | Up-to-date documentation lookup from source repositories                                        |
+| `code-simplifier`      | Simplifies and refines code for clarity and maintainability                                     |
+| `typescript-lsp`       | TypeScript/JavaScript language server for code intelligence                                     |
+| `playwright`           | Browser automation and end-to-end testing via Microsoft Playwright MCP                          |
 | `code-review`          | Automated PR code review with multi-agent scoring                                               |
 | `pr-review-toolkit`    | Specialized PR review agents for comments, tests, error handling, type design, and code quality |
-| `code-simplifier`      | Simplifies and refines code for clarity and maintainability                                     |
-| `context7`             | Up-to-date documentation lookup from source repositories                                        |
+| `commit-commands`      | Git commit, push, and PR creation workflows                                                     |
 | `github`               | Official GitHub MCP server — create issues, manage PRs, search repos                            |
-| `feature-dev`          | Comprehensive feature development workflow with specialized agents                              |
-| `playwright`           | Browser automation and end-to-end testing via Microsoft Playwright MCP                          |
-| `typescript-lsp`       | TypeScript/JavaScript language server for code intelligence                                     |
-| `claude-md-management` | Tools to maintain and improve CLAUDE.md files                                                   |
 | `security-guidance`    | Warns about potential security issues when editing files (XSS, injection, etc.)                 |
+| `claude-md-management` | Tools to maintain and improve CLAUDE.md files                                                   |
 
 ## Prerequisites
 
