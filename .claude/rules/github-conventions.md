@@ -33,6 +33,28 @@ Two GitHub integrations are available — use both:
 - For GitHub API operations (issues, search, etc.): use the `github` MCP plugin
 - All `gh` commands must be run from within the repository directory
 
+## Branch Protection
+
+Always enable branch protection on `main` for every new repository:
+
+- `allow_force_pushes`: false
+- `allow_deletions`: false
+
+Set via:
+
+```bash
+gh api repos/<owner>/<repo>/branches/main/protection \
+  --method PUT \
+  --field required_status_checks=null \
+  --field enforce_admins=false \
+  --field required_pull_request_reviews=null \
+  --field restrictions=null \
+  --field allow_force_pushes=false \
+  --field allow_deletions=false
+```
+
+> Requiring PR reviews needs GitHub Pro for private repos. Public repos can use it for free.
+
 ## Remote
 
 - Always use SSH remote: `git@github.com:<owner>/<repo>.git`
