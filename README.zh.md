@@ -5,6 +5,8 @@ author: Kyle (https://github.com/kyle-park-io)
 date: 2026-03-30
 ---
 
+**Languages**: [English](README.md) | [한국어](README.kr.md) | 中文
+
 # Claude Template
 
 开箱即用的 Claude Code 配置模板。克隆此仓库并根据您的工作流程进行自定义。

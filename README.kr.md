@@ -5,6 +5,8 @@ author: Kyle (https://github.com/kyle-park-io)
 date: 2026-03-30
 ---
 
+**Languages**: [English](README.md) | 한국어 | [中文](README.zh.md)
+
 # Claude Template
 
 바로 사용 가능한 Claude Code 설정 템플릿입니다. 이 레포를 클론하고 워크플로우에 맞게 커스터마이징하세요.
