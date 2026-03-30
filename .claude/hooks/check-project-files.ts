@@ -6,7 +6,7 @@ const cwd = process.cwd();
 const MISSING: string[] = [];
 
 // Check README files
-const readmeFiles = ['README.en.md', 'README.kr.md', 'README.zh.md'];
+const readmeFiles = ['README.md', 'README.kr.md', 'README.zh.md'];
 for (const file of readmeFiles) {
   if (!fs.existsSync(path.join(cwd, file))) {
     MISSING.push(file);
@@ -16,6 +16,11 @@ for (const file of readmeFiles) {
 // Check LICENSE
 if (!fs.existsSync(path.join(cwd, 'LICENSE'))) {
   MISSING.push('LICENSE');
+}
+
+// Check PROJECT.md
+if (!fs.existsSync(path.join(cwd, 'PROJECT.md'))) {
+  MISSING.push('PROJECT.md');
 }
 
 if (MISSING.length > 0) {
