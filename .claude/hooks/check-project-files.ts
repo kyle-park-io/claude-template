@@ -37,3 +37,21 @@ if (MISSING.length > 0) {
     }),
   );
 }
+
+// Install git pre-commit secret guard hook if not already installed
+const gitHookPath = path.join(cwd, '.git', 'hooks', 'pre-commit');
+const guardScriptPath = path.join(
+  cwd,
+  '.claude',
+  'hooks',
+  'pre-commit-secret-guard.sh',
+);
+
+if (fs.existsSync(guardScriptPath) && !fs.existsSync(gitHookPath)) {
+  try {
+    fs.copyFileSync(guardScriptPath, gitHookPath);
+    fs.chmodSync(gitHookPath, 0o755);
+  } catch {
+    // Non-fatal: git hook installation failed silently
+  }
+}

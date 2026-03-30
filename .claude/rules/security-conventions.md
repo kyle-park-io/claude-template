@@ -10,6 +10,19 @@ description: Security guidance plugin usage and secure coding practices.
 - Automatically warns about potential security issues when editing files
 - Covers: command injection, XSS, unsafe code patterns, and more
 
+## Secret Guard Hooks
+
+Two automatic layers prevent secrets from reaching the repository:
+
+| Hook                         | Trigger                          | What it blocks                                                |
+| ---------------------------- | -------------------------------- | ------------------------------------------------------------- |
+| `pre-tool-secret-guard.sh`   | Claude `Write`/`Edit` tool calls | Writes to `.env` files; API key patterns in file content      |
+| `pre-commit-secret-guard.sh` | `git commit` (any author)        | Staged files containing secret patterns; tracked `.env` files |
+
+The pre-commit hook is auto-installed to `.git/hooks/pre-commit` on `SessionStart`.
+
+Detected patterns: `sk-`, `sk-ant-`, `ghp_`, `gho_`, `github_pat_`, `AKIA`, `AIza`, `xoxb-`, `ya29.`, JWT tokens.
+
 ## Rules
 
 - Never ignore security warnings from the plugin — address them before committing
