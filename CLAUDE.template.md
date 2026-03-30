@@ -61,3 +61,15 @@ npm run build
 - Always run tests before marking a task as done
 - Prefer editing existing files over creating new ones
 - Do not add unnecessary comments or docstrings
+
+## Plugin Usage
+
+- When starting a new feature, use `feature-dev` to explore the codebase, plan architecture, and implement step by step.
+- When working on UI/UX or frontend components, use `frontend-design` for design guidance and best practices.
+- When working with a library or framework, use `context7` to fetch up-to-date documentation instead of relying on training data.
+- When a logical chunk of code has been written, use `code-simplifier` to simplify for clarity and maintainability.
+- When writing or debugging end-to-end tests, use `playwright`.
+- Before creating a PR, run `code-review` for a quick overall review, then `pr-review-toolkit` for deeper analysis covering comments, tests, error handling, and type design.
+- When committing, pushing, or creating a PR, use `commit-commands`.
+- When managing GitHub issues, PRs, or repo operations, use `github`.
+- At the end of a session, use `claude-md-management` to capture learnings and update CLAUDE.md.
