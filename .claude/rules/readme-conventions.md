@@ -8,9 +8,15 @@ description: README languages (en/kr/zh), required sections, and sync rules.
 
 Always create README in three languages:
 
-- `README.en.md` — English (default)
+- `README.md` — English (default, shown on GitHub)
 - `README.kr.md` — Korean
 - `README.zh.md` — Chinese (Simplified, 简体中文)
+
+`README.md` is the GitHub-displayed file and contains the English content. Each file must include a language switcher at the top:
+
+```markdown
+**Languages**: English | [한국어](README.kr.md) | [中文](README.zh.md)
+```
 
 All three files must be kept in sync — same content, different languages.
 
@@ -72,6 +78,24 @@ How to contribute — branch naming, PR process, etc.
 
 License name with link to LICENSE file.
 ```
+
+## Star History
+
+Add a Star History chart at the bottom of `README.md` (English only, not needed in kr/zh):
+
+```markdown
+## Star History
+
+<a href="https://www.star-history.com/?repos=<owner>%2F<repo>&type=date&legend=top-left">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/image?repos=<owner>/<repo>&type=date&theme=dark&legend=top-left" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/image?repos=<owner>/<repo>&type=date&legend=top-left" />
+    <img alt="Star History Chart" src="https://api.star-history.com/image?repos=<owner>/<repo>&type=date&legend=top-left" />
+  </picture>
+</a>
+```
+
+Replace `<owner>` and `<repo>` with the actual GitHub owner and repository name.
 
 ## Rules
 
